@@ -1,0 +1,33 @@
+- DOM, SAX, XML Binding
+
+XML binding:
+- objects are instances of class, XML files are unstances of XSD
+- XSD : xml schema
+- from XSD auto generate class
+- class is annotated with annotations from JAXB library (part of JRE)
+- marshal : objects -> XML
+- unmarshal : XML -> objects
+
+XML file -> XSD file : by 
+
+cooked:
+1. File -> New -> Other -> JAXB Project -> provide a target runtime(some JDK or install GlassFish tools)
+(JAXB uses XJC exam which is only in JDK not in JRE for class generation and application)
+Add JDK to Java runtimes in preference if you are unable to find it in DDL
+2. 
+
+1) Select File->New ->Project
+     2) Choose JAXB Project from JAXB and click Next
+     3) Give Project Name and click Next
+     4) On the next window, just Click Next
+     5) On the next window (titled JAXB Facets), Choose "User Library" for JAXB implementation. 
+        Click "Download Library.." picture and choose EclipseLink 2.5.2 
+        (or the higher version shown in the window) and click Next
+        This will install the library (make sure your are connected to internet.)
+		
+Keep JavaEE as perspective in Eclipse
+New -> Other -> JAXB classes from Schema ==> generate class
+
+Using Marshaller, we can save objects to XML file
+Using Unmarshaller, we can read objects from an XML file
+
